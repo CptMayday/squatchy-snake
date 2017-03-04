@@ -21,7 +21,7 @@ def start():
     board_height = data['height']
 
     # Different Start Taunts
-    tauntStart = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
+    tauntStart = ['GL HF!', 'No wards, gg', 'Mid or feed']
 
     head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
