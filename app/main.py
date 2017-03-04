@@ -44,14 +44,13 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.re/quest.json
-    feels = MAD
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt(feels)
+        'taunt': taunt.taunt(MAD)
     }
 
 # Expose WSGI app (so gunicorn can find it)
