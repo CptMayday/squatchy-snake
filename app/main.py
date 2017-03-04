@@ -1,6 +1,7 @@
 import bottle
 import os
 import random
+import dontDie.dontDie as dontDie
 
 
 @bottle.route('/static/<path:path>')
@@ -36,6 +37,9 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
+    
+    #returns a list of moves that wont kill you
+    move = dontDie(data)
 
     return {
         'move': random.choice(directions),
