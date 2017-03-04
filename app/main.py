@@ -39,12 +39,15 @@ def start():
 def move():
     data = bottle.request.json
 
+    # Different Game Taunts
+    taunt = ['GRRR', 'I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
+
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': 'GRR!'
+        'taunt': random.choice(taunt)
     }
 
 
