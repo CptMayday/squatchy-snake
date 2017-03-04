@@ -23,10 +23,11 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#ff00d0',
+        'color': '#003b45',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        "tail_type": "pixel",
+        'head_type': 'fang',
+        "tail_type": "small-rattle",
         'name': 'Squatchy'
     }
 
