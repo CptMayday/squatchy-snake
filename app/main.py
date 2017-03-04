@@ -44,7 +44,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.re/quest.json
-    feels = 'MAD'
+    feels = MAD
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
