@@ -4,10 +4,10 @@ def mySnakeCheck(moveData):
     for snake in moveData['snakes']:
         
         #this is your snake
-        if moveData['snakes'][snake]['id'] == moveData['you']:
+        if snake['id'] == moveData['you']:
             
             #return our snake data
-            return moveData['snakes'][snake]
+            return snake
         
 def myHeadCheck(mySnake):
     
@@ -41,7 +41,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     for snake in moveData['snakes']:
         
         #loop through each listed coordinate with a snake in it
-        for snakehereIndex, snakeHere in enumerate(moveData['snakes'][snake]['coords']):
+        for snakehereIndex, snakeHere in enumerate(snake['coords']):
         #for snakeHere in data[snake]['coords']:
             
             #loop through the not-wall moves
@@ -51,7 +51,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
                 if direction == snakeHere:
                     
                     #if this is not the head of a shorter snake, then it means its the body of a snake
-                    if snakeHereIndex != 0 and myLen <= len(moveData['snakes'][snake]['coords']):
+                    if snakeHereIndex != 0 and myLen <= len(snake['coords']):
                         shouldMove[key] = False
     
     #prepare list of moves from t/f list of safe moves
@@ -63,7 +63,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     return moves
     
 def dontDie(moveData):
-    print "hello world"
+    #print "hello world"
     
     isSafeMove = []
     
@@ -83,7 +83,7 @@ def dontDie(moveData):
         for notSnakeDir in notSnake:
             
             if notWallDir == notSnakeDir:
-                siSafeMove.append(notSnakeDir)
+                isSafeMove.append(notSnakeDir)
     
     #return a list of moves that wont kill you  
     return isSafeMoves
