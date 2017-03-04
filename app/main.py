@@ -1,8 +1,12 @@
+# from plzEatFood import *
+
 import bottle
 import os
 import random
 import dontDie.dontDie as dontDie
-
+import math
+import json
+import taunt
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -16,6 +20,9 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
+    # Different Start Taunts
+    tauntStart = ['GL HF!', 'No wards, gg', 'Mid or feed']
+
     head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
@@ -24,12 +31,14 @@ def start():
     # TODO: Do things with data
 
     return {
+        'secondary_color': '#65DB60',
         'color': '#003b45',
-        'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
+        'taunt': random.choice(tauntStart),
         'head_url': head_url,
+        'head_type': 'fang',
+        'tail_type': 'small-rattle',
         'name': 'Squatchy'
     }
-
 
 @bottle.post('/move')
 def move():
@@ -43,7 +52,7 @@ def move():
 
     return {
         'move': random.choice(directions),
-        'taunt': 'GRR!'
+        'taunt': taunt.taunt("MAD")
     }
 
 
