@@ -44,9 +44,6 @@ def start():
 def move():
     data = bottle.request.json
 
-    # Feelings
-    # feels = ['MAD', 'SAD', 'HUNGRY']
-
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 

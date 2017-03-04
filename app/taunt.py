@@ -13,9 +13,8 @@ def taunt(feels):
     elif feels == "SAD":
         tauntOptions = ['SAD', 'WHY YOU DO THIS', ':\'(']
     elif feels == "HUNGRY":
-        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY']
+        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY', 'I\'m HANGY!]
     else:
         tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
 
     return random.choice(tauntOptions)
-    
