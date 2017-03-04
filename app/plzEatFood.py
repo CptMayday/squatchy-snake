@@ -11,7 +11,7 @@
 #            #return the location of our head
 #            return snake['coords'][0, 1]
 #
-## Collect food data
+# Collect food data
 # def foodCheck(data):
 #
 #    for food in data['food']:
