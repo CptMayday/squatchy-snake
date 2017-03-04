@@ -10,10 +10,10 @@ def taunt(feels):
 
     if feels == "MAD":
         tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
-    elif feels == "SAD":
-        tauntOptions = ['SAD', 'WHY YOU DO THIS']
     elif feels == "HUNGRY":
-        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY', 'I\'m HANGY!']
+        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY', 'soooooo HANGY!']
+    elif feels == "FULL":
+        tauntOptions = ['NOM NOM NOM']
     else:
         tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
 
