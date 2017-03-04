@@ -53,7 +53,7 @@ def move():
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt(random.choice(feelings))
+        'taunt': taunt.taunt(feelings)
     }
 
 # Expose WSGI app (so gunicorn can find it)

@@ -6,13 +6,13 @@ import random
 # - SAD
 # - HUNGRY
 
-def taunt(feels):
+def taunt(feelings):
 
-    if taunt(feels) == MAD:
+    if taunt(feels) == "MAD":
         tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
-    elif taunt(feels) == SAD:
+    elif taunt(feels) == "SAD":
         tauntOptions = ['SAD', 'WHY YOU DO THIS', ':\'(']
-    elif taunt(feels) == HUNGRY:
+    elif taunt(feels) == "HUNGRY":
         tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY']
     else:
         tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
