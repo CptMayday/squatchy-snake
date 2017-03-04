@@ -48,12 +48,13 @@ def move():
     directions = ['up', 'down', 'left', 'right']
     
     if data['snakes']['health_points'] == 98:
-        taunt = 'I\'m HUNGRY' 
+        taunt = "I'm HUNGRY" 
     else:
         taunt = random.choice(taunt)
 
     return {
         'move': random.choice(directions),
+        'taunt': taunt
     }
 
 
