@@ -51,8 +51,7 @@ def move():
 
     return {
         'move': random.choice(directions),
-        #'taunt': taunt(feels)
-        'taunt': "TESTING 1 2 3"
+        'taunt': taunt('HUNGRY')
     }
 
 
