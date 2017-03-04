@@ -20,4 +20,4 @@ def taunt(feels):
         tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
 
     #return random.choice(tauntOptions)
-    return feels
+    return "hi dom!!"
