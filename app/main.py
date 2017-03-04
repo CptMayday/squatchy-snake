@@ -5,7 +5,7 @@ import os
 import random
 import math
 import json
-import taunt
+# import taunt
 
 
 @bottle.route('/static/<path:path>')
@@ -45,14 +45,14 @@ def move():
     data = bottle.request.json
 
     # Feelings
-    feels = ['MAD', 'SAD', 'HUNGRY']
+    # feels = ['MAD', 'SAD', 'HUNGRY']
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt(feels)
+        'taunt': 'Blah'
     }
 
 
