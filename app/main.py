@@ -15,7 +15,7 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    head_url = '%s://%s/static/head.png' % (
+    head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -23,10 +23,10 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
+        'color': '#003b45',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'battlesnake-python'
+        'name': 'squatchy'
     }
 
 
@@ -39,7 +39,7 @@ def move():
 
     return {
         'move': random.choice(directions),
-        'taunt': 'battlesnake-python!'
+        'taunt': 'GRR!'
     }
 
 
