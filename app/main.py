@@ -20,6 +20,8 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
+    print "Hello"
+    
     # Different Start Taunts
     taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
@@ -52,7 +54,7 @@ def move():
     directions = ['up', 'down', 'left', 'right']
 
     if data['snakes']['health_points'] == 98:
-        taunt = "I'm HUNGRY" 
+        taunt = "I'm HUNGRY"
     else:
         taunt = random.choice(taunt)
 
