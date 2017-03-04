@@ -1,11 +1,11 @@
 from plzEatFood import *
+from taunt import *
 
 import bottle
 import os
 import random
 import math
 import json
-import taunt
 
 
 @bottle.route('/static/<path:path>')
@@ -20,8 +20,6 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    print "Hello"
-    
     # Different Start Taunts
     taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
@@ -46,13 +44,16 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    
+
+    # Taunts
+    taunt = ['#Basic']
+
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt
+        'taunt': random.choice(taunt)
     }
 
 
