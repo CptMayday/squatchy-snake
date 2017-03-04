@@ -43,7 +43,7 @@ def start():
 
 @bottle.post('/move')
 def move():
-    data = bottle.request.json
+    data = bottle.re/quest.json
     feels = 'MAD'
 
     # TODO: Do things with data
