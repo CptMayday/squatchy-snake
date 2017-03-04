@@ -44,13 +44,14 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    feels = "HUNGRY"
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt()
+        'taunt': taunt(feels)
     }
 
 
