@@ -5,7 +5,7 @@ import os
 import random
 import math
 import json
-# import taunt
+import taunt
 
 
 @bottle.route('/static/<path:path>')
@@ -52,7 +52,7 @@ def move():
 
     return {
         'move': random.choice(directions),
-        'taunt': 'Blah'
+        'taunt': taunt.taunt("MAD")
     }
 
 
