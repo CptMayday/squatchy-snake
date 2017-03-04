@@ -51,7 +51,8 @@ def move():
     move = dontDie(data)
 
     return {
-        'move': random.choice(directions),
+        #'move': random.choice(directions),
+        'move': move[0],
         'taunt': taunt.taunt("MAD")
     }
 
