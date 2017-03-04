@@ -8,16 +8,14 @@ import random
 
 def taunt(feels):
 
-    
-
-    if taunt(feels) == "MAD":
+    if feels == "MAD":
         tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
-    elif taunt(feels) == "SAD":
+    elif feels == "SAD":
         tauntOptions = ['SAD', 'WHY YOU DO THIS', ':\'(']
-    elif taunt(feels) == "HUNGRY":
+    elif feels == "HUNGRY":
         tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY']
     else:
         tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
 
-    #return random.choice(tauntOptions)
-    return "hi dom!!"
+    return random.choice(tauntOptions)
+    
