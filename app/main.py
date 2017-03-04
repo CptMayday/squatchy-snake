@@ -47,14 +47,13 @@ def move():
 
     # Add Feeling
     feelings = ['MAD', 'SAD', 'HUNGRY']
-    feels = random.choice(feelings)
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt(feels)
+        'taunt': taunt.taunt(random.choice(feelings))
     }
 
 # Expose WSGI app (so gunicorn can find it)
