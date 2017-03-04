@@ -24,7 +24,7 @@ def start():
 
     return {
         'color': '#003b45',
-        'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
+        'taunt': 'EZ MID EZ GAME',
         'head_url': head_url,
         'head_type': 'fang',
         "tail_type": "small-rattle",
