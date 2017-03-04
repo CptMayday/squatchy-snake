@@ -1,4 +1,4 @@
-from plzEatFood import *
+# from plzEatFood import *
 
 import bottle
 import os
