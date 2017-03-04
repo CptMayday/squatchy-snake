@@ -1,7 +1,11 @@
+from plzEatFood import *
+
 import bottle
 import os
 import random
+import math
 import json
+
 
 
 @bottle.route('/static/<path:path>')
@@ -46,7 +50,7 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    
+
     if data['snakes']['health_points'] == 98:
         taunt = "I'm HUNGRY" 
     else:
