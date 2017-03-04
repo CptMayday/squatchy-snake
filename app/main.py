@@ -1,9 +1,9 @@
 # from plzEatFood import *
+from dontDie import dontDie
 
 import bottle
 import os
 import random
-import dontDie.dontDie as dontDie
 import math
 import json
 import taunt
