@@ -1,6 +1,9 @@
+from plzEatFood import *
+
 import bottle
 import os
 import random
+import math
 
 
 @bottle.route('/static/<path:path>')
