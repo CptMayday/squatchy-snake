@@ -1,6 +1,7 @@
 import bottle
 import os
 import random
+import json
 
 
 @bottle.route('/static/<path:path>')
@@ -16,7 +17,7 @@ def start():
     board_height = data['height']
 
     # Different Start Taunts
-    taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GG GOOD GAME!', '#same']
+    taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
     head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
@@ -26,8 +27,8 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#003b45',
         "secondary_color": "#65DB60",
+        'color': '#003b45',
         'taunt': random.choice(taunt),
         'head_url': head_url,
         'head_type': 'fang',
@@ -45,10 +46,14 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
+    
+    if data['snakes']['health_points'] == 98:
+        taunt = 'I\'m HUNGRY' 
+    else:
+        taunt = random.choice(taunt)
 
     return {
         'move': random.choice(directions),
-        'taunt': random.choice(taunt)
     }
 
 
