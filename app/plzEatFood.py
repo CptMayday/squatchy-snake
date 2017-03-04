@@ -5,5 +5,3 @@
 # Collect food data
 
 # Determine closes food piece
-
-# 

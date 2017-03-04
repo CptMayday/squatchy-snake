@@ -31,29 +31,28 @@ def start():
     # TODO: Do things with data
 
     return {
-        "secondary_color": "#65DB60",
+        'secondary_color': '#65DB60',
         'color': '#003b45',
         'taunt': random.choice(tauntStart),
         'head_url': head_url,
         'head_type': 'fang',
-        "tail_type": "small-rattle",
+        'tail_type': 'small-rattle',
         'name': 'Squatchy'
     }
 
-
 @bottle.post('/move')
 def move():
-    data = bottle.re/quest.json
+    data = bottle.request.json
 
-    # Add Feeling
-    # feels = ['MAD', 'SAD', 'HUNGRY']
+    # Feelings
+    feels = ['MAD', 'SAD', 'HUNGRY']
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': "Blah"
+        'taunt': taunt.taunt(feels)
     }
 
 
