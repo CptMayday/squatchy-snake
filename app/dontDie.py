@@ -4,10 +4,10 @@ def mySnakeCheck(moveData):
     for snake in moveData['snakes']:
         
         #this is your snake
-        if data[snake]['id'] == data['you']:
+        if moveData[snake]['id'] == moveData['you']:
             
             #return our snake data
-            return data[snake]
+            return moveData[snake]
         
 def myHeadCheck(mySnake):
     
@@ -73,7 +73,7 @@ def dontDie(moveData):
     myHead = myHeadCheck(mySnake)
     
     #do a wall check
-    notWall = wallCheck(myHead, data['width'], data['height'])
+    notWall = wallCheck(myHead, moveData['width'], moveData['height'])
     
     #do do a snake check
     notSnake = snakeCheck(myHead, mySnake, notWall, moveData)
