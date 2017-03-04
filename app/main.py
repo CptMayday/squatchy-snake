@@ -15,6 +15,9 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
+    # Different Start Taunts
+    taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GG GOOD GAME!', '#same']
+
     head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
@@ -24,7 +27,7 @@ def start():
 
     return {
         'color': '#003b45',
-        'taunt': 'EZ MID EZ GAME',
+        'taunt': random.choice(taunt),
         'head_url': head_url,
         'head_type': 'fang',
         "tail_type": "small-rattle",
