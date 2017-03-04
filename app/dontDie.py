@@ -53,10 +53,19 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
                     #if this is not the head of a shorter snake, then it means its the body of a snake
                     if snakeHereIndex != 0 and myLen <= len(moveData[snake]['coords']):
                         shouldMove[key] = False
-                
+    
+    #prepare list of moves from t/f list of safe moves
+    for key, move in shouldMove:
+        if move == True:
+            moves.append(key)
+
+    #return list of safe move dirrections
+    return moves
     
 def dontDie(moveData):
     print "hello world"
+    
+    isSafeMove = []
     
     mySnake = mySnakeCheck(moveData)
     
@@ -67,8 +76,14 @@ def dontDie(moveData):
     notWall = wallCheck(myHead, data['width'], data['height'])
     
     #do do a snake check
-    snakeCheck(myHead, mySnake, notWall, moveData)
+    notSnake = snakeCheck(myHead, mySnake, notWall, moveData)
         
-        
+    
+    for notWallDir in notWall:
+        for notSnakeDir in notSnake:
+            
+            if notWallDir == notSnakeDir:
+                siSafeMove.append(notSnakeDir)
+    
     #return a list of moves that wont kill you  
-    return moves
+    return isSafeMoves
