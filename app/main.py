@@ -27,6 +27,7 @@ def start():
 
     return {
         'color': '#003b45',
+        "secondary_color": "#65DB60",
         'taunt': random.choice(taunt),
         'head_url': head_url,
         'head_type': 'fang',
