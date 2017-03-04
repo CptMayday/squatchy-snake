@@ -6,15 +6,15 @@ import random
 # - SAD
 # - HUNGRY
 
-def taunt(feels):
+#def taunt(feels):
 
-    if taunt(feels) == "MAD":
-        tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
-    elif taunt(feels) == "SAD":
-        tauntOptions = ['SAD', 'WHY YOU DO THIS', ':\'(']
-    elif taunt(feels) == "HUNGRY":
-        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY']
-    else:
-        tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
-
-    return random.choice(tauntOptions)
+#    if taunt(feels) == "MAD":
+#        tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
+#    elif taunt(feels) == "SAD":
+#        tauntOptions = ['SAD', 'WHY YOU DO THIS', ':\'(']
+#    elif taunt(feels) == "HUNGRY":
+#        tauntOptions = ['FOOD PLEASE', 'I\'M HANGRY']
+#    else:
+#        tauntOptions = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
+#
+#    return random.choice(tauntOptions)
