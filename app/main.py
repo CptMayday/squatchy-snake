@@ -1,11 +1,11 @@
 from plzEatFood import *
+from taunt import *
 
 import bottle
 import os
 import random
 import math
 import json
-import taunt
 
 
 @bottle.route('/static/<path:path>')
