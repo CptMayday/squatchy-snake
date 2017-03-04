@@ -88,4 +88,4 @@ def dontDie(moveData):
                 isSafeMove.append(notSnakeDir)
     
     #return a list of moves that wont kill you  
-    return isSafeMoves
+    return isSafeMove
