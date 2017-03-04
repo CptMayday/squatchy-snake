@@ -46,7 +46,7 @@ def move():
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
-    
+
     #returns a list of moves that wont kill you
     move = dontDie(data)
 
