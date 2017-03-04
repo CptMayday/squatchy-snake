@@ -20,6 +20,8 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
+    print "Hello"
+    
     # Different Start Taunts
     taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
