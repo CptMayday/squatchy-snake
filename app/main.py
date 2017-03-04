@@ -46,14 +46,14 @@ def move():
     data = bottle.re/quest.json
 
     # Add Feeling
-    feelings = ['MAD', 'SAD', 'HUNGRY']
+    # feels = ['MAD', 'SAD', 'HUNGRY']
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt(feelings)
+        'taunt': "Blah"
     }
 
 # Expose WSGI app (so gunicorn can find it)

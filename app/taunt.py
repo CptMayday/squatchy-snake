@@ -6,7 +6,7 @@ import random
 # - SAD
 # - HUNGRY
 
-def taunt(feelings):
+def taunt(feels):
 
     if taunt(feels) == "MAD":
         tauntOptions = ['GRRR', 'I\'M MAD BRO', '#TABLEFLIP', '#RAGEQUIT']
