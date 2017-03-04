@@ -46,7 +46,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
             
             #loop through the not-wall moves
             #for key, direction in locationDict:
-            for key, value in locationDict.iteritems():
+            for key, direction in locationDict.iteritems():
                 
                 #if there is a snake where we are looking to move
                 if direction == snakeHere:
