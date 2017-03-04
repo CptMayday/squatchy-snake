@@ -21,7 +21,7 @@ def start():
     board_height = data['height']
 
     # Different Start Taunts
-    taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
+    tauntStart = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
     head_url = '%s://%s/static/RS.png' % (
         bottle.request.urlparts.scheme,
@@ -33,7 +33,7 @@ def start():
     return {
         "secondary_color": "#65DB60",
         'color': '#003b45',
-        'taunt': random.choice(taunt),
+        'taunt': random.choice(tauntStart),
         'head_url': head_url,
         'head_type': 'fang',
         "tail_type": "small-rattle",
@@ -44,13 +44,14 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    feels = 'MAD'
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt()
+        'taunt': taunt('HUNGRY')
     }
 
 # Expose WSGI app (so gunicorn can find it)
