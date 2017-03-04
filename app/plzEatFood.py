@@ -6,7 +6,7 @@ def myHeadCheck(data):
     for snake in data['snakes']:
 
         #this is your snake
-        if snake['id'] == snake['you']:
+        if snake['id'] == data['you']:
 
             #return the location of our head
             return snake['coords'][0, 1]
