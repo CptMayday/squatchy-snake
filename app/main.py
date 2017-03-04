@@ -26,7 +26,7 @@ def start():
         'color': '#003b45',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'squatchy'
+        'name': 'Squatchy'
     }
 
 

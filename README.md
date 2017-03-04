@@ -71,7 +71,7 @@ heroku logs --tail
 ### Running the game on BattleSnake.io
 
 * Visit `http://app.battlesnake.io/`
-* App your heroku URL
+* Add your heroku URL
 * Start a New Game
 
 ## Questions?
