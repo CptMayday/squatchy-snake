@@ -1,6 +1,6 @@
 # battlesnake-python
 
-A simple [BattleSnake AI](http://battlesnake.io) written in Python. 
+A simple [BattleSnake AI](http://battlesnake.io) written in Python.
 
 Visit [battlesnake.io/readme](http://battlesnake.io/readme) for API documentation and instructions for running your AI.
 
@@ -57,6 +57,22 @@ or visit [http://APP_NAME.herokuapp.com](http://APP_NAME.herokuapp.com).
 ```
 heroku logs --tail
 ```
+
+## Play a Game - Locally
+
+### Running Your Own Game Server (With Docker)
+
+* Install Docker
+* Run `docker run -it -p 4000:4000 stembolt/battle_snake`
+* Visit `http://localhost:4000` *NOTE:* Docker runs on a virtual lan so when you add a snake to the game you cannot use localhost, use your internal IP instead.
+
+## Play a Game - BattleSnake
+
+### Running the game on BattleSnake.io
+
+* Visit `http://app.battlesnake.io/`
+* App your heroku URL
+* Start a New Game
 
 ## Questions?
 
