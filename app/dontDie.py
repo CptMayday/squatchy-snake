@@ -41,7 +41,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     for snake in moveData['snakes']:
         
         #loop through each listed coordinate with a snake in it
-        for snakehereIndex, snakeHere in enumerate(snake['coords']):
+        for snakeHereIndex, snakeHere in enumerate(snake['coords']):
         #for snakeHere in data[snake]['coords']:
             
             #loop through the not-wall moves
