@@ -1,10 +1,12 @@
 from plzEatFood import *
+from taunt import *
 
 import bottle
 import os
 import random
 import math
 import json
+
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -43,20 +45,15 @@ def start():
 def move():
     data = bottle.request.json
 
-    # Different Game Taunts
-    taunt = ['GRRR', 'I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
+    # Taunts
+    taunt = ['#Basic']
 
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
-    if data['snakes']['health_points'] == 98:
-        taunt = "I'm HUNGRY"
-    else:
-        taunt = random.choice(taunt)
-
     return {
         'move': random.choice(directions),
-        'taunt': taunt
+        'taunt': random.choice(taunt)
     }
 
 
