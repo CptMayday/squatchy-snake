@@ -1,21 +1,21 @@
 # Collect Food Code
 
 # Find snake ID
-def myHeadCheck(data):
+def mySnakeCheck(snakeData):
 
-    for snake in data['snakes']:
+    for snake in snakeData['snakes']:
 
         #this is your snake
-        if snake['id'] == data['you']:
+        if snake['id'] == snakeData['you']:
 
             #return the location of our head
-            return snake['coords'][0, 1]
+            return snake
 
 # Collect food data
-def foodCheck(data):
+def foodCheck(foodData):
 
-    for food in data['food']:
+    for food in foodData['food']:
 
-        return food['coords'][0, 1]
+        return food
 
 # Determine closes food piece

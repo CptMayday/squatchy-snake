@@ -56,7 +56,8 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
                         shouldMove[key] = False
     
     #prepare list of moves from t/f list of safe moves
-    for key, move in shouldMove:
+    #for key, move in shouldMove:
+    for key, move in shouldMove.iteritems():
         if move == True:
             moves.append(key)
 
@@ -87,4 +88,4 @@ def dontDie(moveData):
                 isSafeMove.append(notSnakeDir)
     
     #return a list of moves that wont kill you  
-    return isSafeMoves
+    return isSafeMove
