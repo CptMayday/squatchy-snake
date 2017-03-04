@@ -45,15 +45,12 @@ def start():
 def move():
     data = bottle.request.json
 
-    # Taunts
-    taunt = ['#Basic']
-
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': random.choice(taunt)
+        'taunt': taunt()
     }
 
 
