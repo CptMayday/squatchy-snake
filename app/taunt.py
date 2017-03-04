@@ -13,7 +13,7 @@ def taunt(feels):
     elif taunt(feels) == "SAD":
         taunt = ['SAD', 'WHY YOU DO THIS', ':\'(']
     elif taunt(feels) == "HUNGRY":
-        taunt = ['FOOD PLEASE', 'I\'M HUNGRY']
+        taunt = ['FOOD PLEASE', 'I\'M HANGRY']
     else:
         taunt = ['I\'MMMA WIN, JK', 'LOLOL', 'Come Get Me!']
     
