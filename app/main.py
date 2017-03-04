@@ -6,8 +6,6 @@ import random
 import math
 import json
 
-
-
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -20,8 +18,6 @@ def start():
     board_width = data['width']
     board_height = data['height']
 
-    print "Hello"
-    
     # Different Start Taunts
     taunt = ['EZ MID EZ GAME', 'LOLOLOLOL', 'GOOD GAME!', '#same', 'REKT', 'GG WP']
 
