@@ -1,5 +1,5 @@
 # from plzEatFood import *
-from dontDie import dontDie
+# from dontDie import dontDie
 
 import bottle
 import os
@@ -48,7 +48,7 @@ def move():
     directions = ['up', 'down', 'left', 'right']
 
     #returns a list of moves that wont kill you
-    move = dontDie(data)
+    # move = dontDie(data)
 
     return {
         'move': random.choice(directions),
