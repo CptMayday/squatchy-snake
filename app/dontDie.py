@@ -18,10 +18,10 @@ def wallCheck(myHead, width, height):
     moves = []
     
     #if moving would not hit a wall
-    if (myHead[0] - 1) > 0: moves.append("left")
-    if (myHead[0] + 1) < (width-1): moves.append("right")
-    if (myHead[1] - 1) > 0: moves.append("up")
-    if (myHead[1] + 1) < (height-1): moves.append("down")
+    if (myHead[0] - 1) >= 0: moves.append("left")
+    if (myHead[0] + 1) <= (width-1): moves.append("right")
+    if (myHead[1] - 1) >= 0: moves.append("up")
+    if (myHead[1] + 1) <= (height-1): moves.append("down")
     
     return moves
     
