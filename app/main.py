@@ -1,11 +1,11 @@
 from plzEatFood import *
-from taunt import *
 
 import bottle
 import os
 import random
 import math
 import json
+import taunt
 
 
 @bottle.route('/static/<path:path>')
@@ -45,12 +45,16 @@ def start():
 def move():
     data = bottle.re/quest.json
 
+    # Add Feeling
+    feelings = ['MAD', 'SAD', 'HUNGRY']
+    feels = random.choice(feelings)
+
     # TODO: Do things with data
     directions = ['up', 'down', 'left', 'right']
 
     return {
         'move': random.choice(directions),
-        'taunt': taunt.taunt()
+        'taunt': taunt.taunt(feels)
     }
 
 # Expose WSGI app (so gunicorn can find it)
