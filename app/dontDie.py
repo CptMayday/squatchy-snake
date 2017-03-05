@@ -58,6 +58,8 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
                     
                     #if this is not the head of a shorter snake, then it means its the body of a snake
                     if snakeHereIndex != 0 and myLen <= len(snake['coords']):
+                        print key
+                        print "False"
                         shouldMove[key] = False
     
     #prepare list of moves from t/f list of safe moves
