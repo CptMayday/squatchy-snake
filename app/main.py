@@ -1,6 +1,6 @@
 from plzEatFood import plzEatFood
 from dontDie import dontDie
-from plzEatFood import plzEatFood
+from plzEatFood import myClosestFoodCheck
 from combineMoves import combineMoves
 
 import bottle
