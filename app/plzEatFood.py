@@ -1,21 +1,6 @@
+from dontDie import dontDie
+import math
 # Collect Food Code
-
-# Find snake
-def mySnakeCheck(snakeData):
-
-    for snake in snakeData['snakes']:
-
-        #this is your snake
-        if snake['id'] == snakeData['you']:
-
-            #return snake
-            return snake
-
-# Find snake head location
-def myHeadCheck(mySnake):
-
-    #return snake head location
-    return mysnake['coords'][0]
 
 # Find food
 def myFoodCheck(foodData):
@@ -25,28 +10,34 @@ def myFoodCheck(foodData):
         #return food
         return food
 
-# Find food location
-def myFoodLocationCheck(myFood):
-
-    #return food location
-    return food['coords']
-
 # Determine closes food piece
-def myClosesFoodCheck(myHead, findFood):
+def myClosestFoodCheck(myFood, myHead):
+    closestDist = 20
+    closestFood = []
+
+    #math
+    for food in myFood:
+        dx = abs(myHead[0] - food[0])
+        dy = abs(myHead[1] - food[1])
+        distance = dx + dy
+
+        if distance < closestDist:
+            closestFood = food
+
 
     #return closes food locations
-    return location
+    return closestFood
+
+def moveToFood():
+
 
 # Main Function
-def plzEatFood(moveData):
+def plzEatFood(foodData, myHead):
 
-    # Snake
-    mySnake = mySnakeCheck(snakeData)
-    myHead = myHeadCheck(mySnake)
 
-    # Food
     myFood = myFoodCheck(foodData)
-    findFood = myFoodLocationCheck(myFood)
+
+    myClosestFoodCheck(myFood, myHead)
 
     # Do a Food Check
 
