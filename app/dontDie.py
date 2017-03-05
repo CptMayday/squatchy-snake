@@ -36,7 +36,7 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     
     myLen = len(mySnake['coords'])
     
-    locations = [[(myHead[0]-1),myHead[1]],[myHead[0],(myHead[1]-1)],[(myHead[0]+1),myHead[1]],[myHead[0],(myHead[1]+1)]]
+    locations = [[(myHead[0]-1),myHead[1]],[(myHead[0]+1),myHead[1]],[myHead[0],(myHead[1]-1)],[myHead[0],(myHead[1]+1)]]
     print "locations"
     print locations
     
@@ -68,6 +68,9 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     #prepare list of moves from t/f list of safe moves
     #for key, move in shouldMove:
     for key, move in shouldMove.iteritems():
+        
+        print "move"
+        print move
         if move == True:
             moves.append(key)
 
