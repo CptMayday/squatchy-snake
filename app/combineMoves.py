@@ -6,4 +6,4 @@ def move(dontDieMoves, foodMove):
         if dontDieMove == foodMove:
             return foodMove
         else:
-            return random.choice(dontDieMoves)
+            return dontDieMove
