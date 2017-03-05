@@ -7,8 +7,8 @@ import dontDie
 # - SAD
 # - HUNGRY
 
-    mySnake = mySnakeCheck(moveData):
-    print mySnake
+mySnake = mySnakeCheck(moveData):
+print mySnake
 
 def taunt(feels):
 
