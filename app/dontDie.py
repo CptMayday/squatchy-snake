@@ -23,6 +23,9 @@ def wallCheck(myHead, width, height):
     if (myHead[1] - 1) >= 0: moves.append("up")
     if (myHead[1] + 1) <= (height-1): moves.append("down")
     
+    print "moves"
+    print moves
+    
     return moves
     
 def snakeCheck(myHead, mySnake, notWall, moveData):
@@ -34,6 +37,8 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
     myLen = len(mySnake['coords'])
     
     locations = [[(myHead[0]-1),myHead[1]],[myHead[0],(myHead[1]-1)],[(myHead[0]+1),myHead[1]],[myHead[0],(myHead[1]+1)]]
+    print "locations"
+    print locations
     
     locationDict = {'left': locations[0],'right': locations[1], 'up': locations[2], 'down': locations[3]}
     
@@ -77,8 +82,14 @@ def dontDie(moveData):
     #do a wall check
     notWall = wallCheck(myHead, moveData['width'], moveData['height'])
     
+    print "notWall"
+    print notWall
+    
     #do do a snake check
     notSnake = snakeCheck(myHead, mySnake, notWall, moveData)
+    
+    print "notSnake"
+    print notSnake
         
     
     for notWallDir in notWall:
@@ -87,5 +98,7 @@ def dontDie(moveData):
             if notWallDir == notSnakeDir:
                 isSafeMove.append(notSnakeDir)
     
+    print "isSafeMove"
+    print isSafeMove
     #return a list of moves that wont kill you  
     return isSafeMove
