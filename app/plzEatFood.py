@@ -11,7 +11,10 @@ def myFoodCheck(foodData):
         return food
 
 # Determine closes food piece
-def myClosestFoodCheck(myFood, myHead):
+def myClosestFoodCheck(myFood):
+
+    myHead = myHeadCheck(snake)
+
     closestDist = 20
     closestFood = []
 
