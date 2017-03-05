@@ -53,13 +53,13 @@ def move():
     #returns a list of moves that wont kill you
     isSafeMove = dontDie(data)
 
-    eatMoves = myClosestFoodCheck(data['food'], data)
+    #eatMoves = myClosestFoodCheck(data['food'], data)
     
-    move = combineMoves(isSafeMove, eatMoves)
+    #move = combineMoves(isSafeMove, eatMoves)
 
     return {
         #'move': random.choice(directions),
-        'move': move,
+        'move': isSafeMove[0],
         'taunt': taunt.taunt("MAD")
     }
 
