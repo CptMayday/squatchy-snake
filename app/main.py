@@ -53,8 +53,6 @@ def move():
     #returns a list of moves that wont kill you
     isSafeMove = dontDie(data)
 
-    myHead = 
-    
     eatMoves = myClosestFoodCheck(data['food'], data)
     
     move = combineMoves(isSafeMove, eatMoves)
