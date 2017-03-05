@@ -24,13 +24,13 @@ def myClosestFoodCheck(myFood, myHead):
         if distance < closestDist:
             closestFood = food
 
-            if dx > 0 && dx > dy:
+            if dx > 0 and dx > dy:
                 closestDir = "right"
-            if dx < 0 && dx > dy:
+            if dx < 0 and dx > dy:
                 closestDir = "left"
-            if dy > 0 && dy > dx:
+            if dy > 0 and dy > dx:
                 closestDir = "down"
-            if dy < 0 && dy > dx:
+            if dy < 0 and dy > dx:
                 closestDir = "up"
 
     #return closes food locations
