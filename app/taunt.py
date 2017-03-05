@@ -1,10 +1,14 @@
 import random
+import dontDie
 
 # Different Game Taunts, add a feeling to get a random taunt matching this feeling
 # Accepted feels
 # - MAD
 # - SAD
 # - HUNGRY
+
+#mySnake = mySnakeCheck(moveData)
+#print mySnake
 
 def taunt(feels):
 
