@@ -1,4 +1,4 @@
-# from plzEatFood import *
+from plzEatFood import plzEatFood
 from dontDie import dontDie
 from plzEatFood import plzEatFood
 from combineMoves import combineMoves
