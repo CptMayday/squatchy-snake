@@ -14,7 +14,6 @@ def myFoodCheck(foodData):
 def myClosestFoodCheck(myFood, myHead):
     closestDist = 20
     closestFood = []
-    closestDir =
 
     #math
     for food in myFood:
