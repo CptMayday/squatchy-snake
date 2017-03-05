@@ -14,31 +14,38 @@ def myFoodCheck(foodData):
 def myClosestFoodCheck(myFood, myHead):
     closestDist = 20
     closestFood = []
+    closestDir =
 
     #math
     for food in myFood:
-        dx = abs(myHead[0] - food[0])
-        dy = abs(myHead[1] - food[1])
-        distance = dx + dy
+        dx = myHead[0] - food[0]
+        dy = myHead[1] - food[1]
+        distance = abs(dx) + abs(dy)
 
         if distance < closestDist:
             closestFood = food
 
+            if dx > 0 && dx > dy:
+                closestDir = "right"
+            if dx < 0 && dx > dy:
+                closestDir = "left"
+            if dy > 0 && dy > dx:
+                closestDir = "down"
+            if dy < 0 && dy > dx:
+                closestDir = "up"
 
     #return closes food locations
-    return closestFood
-
-def moveToFood():
-
+    return closestDir
 
 # Main Function
-def plzEatFood(foodData, myHead):
+def plzEatFood(data):
 
+    foodData = data['food']
+
+    snake = mySnakeCheck(data)
+    myHead = myHeadCheck(snake)
 
     myFood = myFoodCheck(foodData)
+    direction = foodDirection(myClosestFoodCheck(myFood, myHead), myHead)
 
-    myClosestFoodCheck(myFood, myHead)
-
-    # Do a Food Check
-
-    return getzThemFood
+    return

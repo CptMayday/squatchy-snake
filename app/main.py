@@ -1,4 +1,4 @@
-# from plzEatFood import *
+from plzEatFood import plzEatFood
 from dontDie import dontDie
 
 import bottle
@@ -49,7 +49,7 @@ def move():
 
     #returns a list of moves that wont kill you
     move = dontDie(data)
-    
+
     print "move[0]"
     print move[0]
 
