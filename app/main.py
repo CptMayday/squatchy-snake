@@ -59,7 +59,7 @@ def move():
 
     return {
         #'move': random.choice(directions),
-        'move': isSafeMove[0],
+        'move': random.choice(isSafeMove),
         'taunt': taunt.taunt("MAD")
     }
 
