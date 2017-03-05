@@ -56,6 +56,9 @@ def snakeCheck(myHead, mySnake, notWall, moveData):
                 #if there is a snake where we are looking to move
                 if direction == snakeHere:
                     
+                    print "snakehere"
+                    print snakeHere
+                    
                     #if this is not the head of a shorter snake, then it means its the body of a snake
                     if snakeHereIndex != 0 and myLen <= len(snake['coords']):
                         print key

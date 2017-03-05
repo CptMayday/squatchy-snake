@@ -49,6 +49,9 @@ def move():
 
     #returns a list of moves that wont kill you
     move = dontDie(data)
+    
+    print "move[0]"
+    print move[0]
 
     return {
         #'move': random.choice(directions),
