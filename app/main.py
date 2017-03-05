@@ -3,6 +3,7 @@ from dontDie import dontDie
 from plzEatFood import myClosestFoodCheck
 from combineMoves import combineMoves
 
+
 import bottle
 import os
 import random
@@ -52,7 +53,9 @@ def move():
     #returns a list of moves that wont kill you
     isSafeMove = dontDie(data)
 
-    eatMoves = myClosestFoodCheck(data)
+    myHead = 
+    
+    eatMoves = myClosestFoodCheck(data['food'])
     
     move = combineMoves(isSafeMove, eatMoves)
 
