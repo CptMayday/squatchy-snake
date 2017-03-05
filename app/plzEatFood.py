@@ -32,12 +32,22 @@ def myFoodLocationCheck(myFood):
     return food['coords']
 
 # Determine closes food piece
+def myClosesFoodCheck(myHead, findFood):
+
+    #return closes food locations
+    return location
 
 # Main Function
 def plzEatFood(moveData):
 
+    # Snake
     mySnake = mySnakeCheck(snakeData)
+    myHead = myHeadCheck(mySnake)
 
+    # Food
     myFood = myFoodCheck(foodData)
+    findFood = myFoodLocationCheck(myFood)
+
+    # Do a Food Check
 
     return getzThemFood
