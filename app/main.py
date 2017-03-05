@@ -55,7 +55,7 @@ def move():
 
     myHead = 
     
-    eatMoves = myClosestFoodCheck(data['food'])
+    eatMoves = myClosestFoodCheck(data['food'], data)
     
     move = combineMoves(isSafeMove, eatMoves)
 
