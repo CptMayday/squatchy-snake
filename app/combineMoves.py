@@ -1,4 +1,5 @@
 import json
+import random
 
 def move(dontDieMoves, foodMove):
     for dontDieMove in dontDieMoves:
