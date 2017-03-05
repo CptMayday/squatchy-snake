@@ -1,5 +1,7 @@
 from plzEatFood import plzEatFood
 from dontDie import dontDie
+from plzEatFood import myClosestFoodCheck
+from combineMoves import combineMoves
 
 import bottle
 import os
@@ -48,14 +50,15 @@ def move():
     directions = ['up', 'down', 'left', 'right']
 
     #returns a list of moves that wont kill you
-    move = dontDie(data)
+    isSafeMove = dontDie(data)
 
-    print "move[0]"
-    print move[0]
+    eatMoves = myClosestFoodCheck(data)
+    
+    move = combineMoves(isSafeMove, eatMoves)
 
     return {
         #'move': random.choice(directions),
-        'move': move[0],
+        'move': move,
         'taunt': taunt.taunt("MAD")
     }
 
